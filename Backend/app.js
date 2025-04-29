@@ -1,6 +1,9 @@
 // Importo todo lo de la libreria de Express
 import express from "express";
 import cookieParser from "cookie-parser";
+import doctoresRoutes from "./src/routes/doctore.js";
+import passwordRecovery from "./src/routes/passwordRecovery.js";
+
 
 
 // Creo una constante que es igual a la libreria que importé

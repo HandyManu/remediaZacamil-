@@ -9,8 +9,8 @@ doctoresController.getDoctores = async (req, res) => {
   
   // INSERT
   doctoresController.createDoctores = async (req, res) => {
-    const { nombre , descripcion , precio , stock} = req.body;
-    const newDoctor = new doctoresModel({ nombre , descripcion , precio , stock});
+    const { nombre , especialidad , correo , contraseña} = req.body;
+    const newDoctor = new doctoresModel({ nombre , especialidad , correo , contraseña});
     await newDoctor.save();
     res.json({ message: "al chile ya lo guarde" });
   };
@@ -27,12 +27,12 @@ doctoresController.getDoctores = async (req, res) => {
   // UPDATE
   doctoresController.updateDoctores = async (req, res) => {
     // Solicito todos los valores
-    const { nombre , descripcion , precio , stock } = req.body;
+    const { nombre , especialidad , correo , contraseña} = req.body;
     // Actualizo
     await doctoresModel.findByIdAndUpdate(
       req.params.id,
       {
-        nombre , descripcion , precio , stock
+        nombre , especialidad , correo , contraseña
       },
       { new: true }
     );

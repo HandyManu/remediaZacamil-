@@ -6,19 +6,19 @@ const productSchema = new Schema(
       type: String,
       required: true,
     },
-    descripcion: {
+    especialidad: {
       type: String,
       required: false,
     },
-    precio: {
-      type: Number,
+    correo: {
+      type: String,
       required: true,
-      min: 0, // Asegura que el precio no sea negativo
+
     },
-    stock: {
-      type: Number,
+    contraseña: {
+      type: String,
       required: true,
-      min: 0, // Asegura que el stock no sea negativo
+
     },
   },
   {
